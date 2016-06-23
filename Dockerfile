@@ -1,4 +1,5 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
+User 0
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -qq && apt-get install -y postfix dovecot-imapd dovecot-ldap postfix-ldap runit -qq
 RUN rm -rf /etc/sv/getty-5
